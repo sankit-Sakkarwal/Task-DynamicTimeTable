@@ -1,0 +1,14 @@
+﻿@model TimetableInputModel
+
+<form asp-action="CalculateHours" method="post">
+    <label>Working Days:</label>
+    <input asp-for="WorkingDays" type="number" min="1" max="7" required />
+
+    <label>Subjects Per Day:</label>
+    <input asp-for="SubjectsPerDay" type="number" min="1" max="9" required />
+
+    <label>Total Subjects:</label>
+    <input asp-for="TotalSubjects" type="number" min="1" required />
+
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@model TimetableInputModel
+@{
+    var timetable = (List<List<string>>)ViewBag.Timetable;
+}
+
+<table>
+    <thead>
+        <tr>
+            @for (int i = 1; i <= Model.WorkingDays; i++)
+            {
+                <th>Day @i</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in timetable)
+        {
+            <tr>
+                @foreach (var subject in row)
+                {
+                    <td>@subject</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
